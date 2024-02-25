@@ -1,9 +1,14 @@
 puts "Bem-vindo ao seu caderno de receita"
+INSERIR_RECEITA = 1
+VISUALIZAR_RECEITAS = 2
+BUSCAR_RECEITAS = 3
+SAIR = 4
 
 def menu ()
-	puts "[1] Cadastrar nova receita"
-	puts "[2] Ver receitas"
-	puts "[3] Sair"
+	puts "[#{INSERIR_RECEITA}] Cadastrar nova receita"
+	puts "[#{VISUALIZAR_RECEITAS}] Ver receitas"
+	puts "[#{BUSCAR_RECEITAS}] Buscar receitas"
+	puts "[#{SAIR}] Sair"
 	print "Escolha uma opção: "
   return gets.to_i()
 end
@@ -23,17 +28,24 @@ def imprimir_receitas(r)
 	puts
 	r.each do |receita|
 	puts"#{receita[:nome]} - #{receita[:tipo]}"
+	end
+	puts
+#if receitas.empty?(r)
+ #puts "Nenhuma receita cadastrada"
 end
+def buscar()
+
 end
 receitas = []
 opcao = menu()
 
-while (opcao != 3) do
-  if (opcao == 1 )
+loop do
+  if (opcao == INSERIR_RECEITA )
 	receitas << inserir_receita()
-elsif(opcao == 2 )
+elsif(opcao == VISUALIZAR_RECEITAS )
   imprimir_receitas(receitas)
-
+elsif( opcao==SAIR)
+	break
 else
 puts
 puts 'Opção inválida'

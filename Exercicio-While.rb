@@ -1,5 +1,6 @@
 puts "Seja bem vindo prof"
 
+
 def menu()
     puts "[1] Cadastrar novo aluno"
     puts "[2] Ver alunos"
