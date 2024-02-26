@@ -1,4 +1,6 @@
+
 class Conta
+  require_relative 'cliente'
   #atributo de leitura que irá substituir as funções que estão comentadas lá embaixo
   attr_reader :numero, :titular
   #acessor = leitura/escrita
