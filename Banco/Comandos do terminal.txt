@@ -1,0 +1,12 @@
+require_relative 'conta'
+conta = Conta.new(1, 'lucas', 100)
+outra_conta = Conta.new(1, 'lu', 10)
+conta
+outra_conta
+conta.saldo
+outra_conta.saldo
+conta.depositar(valor)
+
+conta.sacar(Valor do saque)
+outra_conta.sacar(Valor do saque)
+conta.transferir(outra_conta, 80)
